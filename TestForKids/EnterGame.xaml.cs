@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using System.Xml.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 
 namespace TestForKids
@@ -30,6 +31,7 @@ namespace TestForKids
         private DispatcherTimer timer; // מחלקה מובנית בשפה
         int WrongForMinus = 0;
         int WrongForPlus = 0;
+        int onfire = 0;
 
 
 
@@ -38,18 +40,6 @@ namespace TestForKids
             InitializeComponent();
             Final_Grade.Visibility = Visibility.Collapsed;
             Generate_Targilim();
-
-
-           // Correct.Source = new Uri("C:\\Users\\User\\Downloads\\answer-correct.mp3", UriKind.RelativeOrAbsolute);
-            //Wrong_Answer.Source = new Uri("C:\\Users\\User\\Downloads\\erro.mp3", UriKind.RelativeOrAbsolute);
-          //  Error.Source = new Uri("C:\\Users\\User\\Downloads\\windows-10-error-soundshorter.mp3", UriKind.RelativeOrAbsolute);
-         //   Clock.Source = new Uri("C:\\Users\\User\\Downloads\\countdown-clock-only.mp3", UriKind.RelativeOrAbsolute);
-
-           // Wrong_Answer.LoadedBehavior = MediaState.Manual;
-         //   Correct.LoadedBehavior = MediaState.Manual;
-          //  Error.LoadedBehavior = MediaState.Manual;
-          //  Clock.LoadedBehavior = MediaState.Manual;
-
 
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
@@ -118,7 +108,7 @@ namespace TestForKids
             Check.Visibility = Visibility.Visible;
             answer.Text = "הכנס תשובה";
 
-            if (this.numberOfTargilim == 2)
+            if (this.numberOfTargilim == 5)
             {
                 Clock.Stop();
                 Timer.Visibility = Visibility.Collapsed;
@@ -169,6 +159,11 @@ namespace TestForKids
 
         private void Check_Click(object sender, RoutedEventArgs e)
         {
+            if (onfire > 3)
+            {
+                Fire.Visibility = Visibility.Visible;
+
+            }
 
             try
             {
@@ -194,13 +189,15 @@ namespace TestForKids
                     Correct.Position = TimeSpan.Zero;
                     Correct.Play();
 
-
+                    onfire++;
                     MessageBox.Show("Correct! Keep Going:)");
                     Generate_Targil.Visibility = Visibility.Visible;
                     Check.Visibility = Visibility.Collapsed;
                 }
                 else
                 {
+                    onfire = 0;
+
                     if (Plus_Minus.Text == "-")
                     {
                         WrongForMinus++;

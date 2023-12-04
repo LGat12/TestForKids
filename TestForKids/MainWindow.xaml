@@ -31,8 +31,8 @@
                  VerticalAlignment="Center" HorizontalAlignment="center" Click="המשך_Click"/>
 
 
-        <Image x:Name="ספר" Grid.Row="1" Grid.Column="2" Grid.RowSpan="1"/>
-        <Image x:Name="עיפרון" Grid.Row="0" Grid.Column="2" Grid.RowSpan="1"/>
+        <Image x:Name="ספר" Grid.Row="1" Grid.Column="2" Source="Images\שבילים.jpg" Grid.RowSpan="1"/>
+        <Image x:Name="עיפרון" Grid.Row="0" Grid.Column="2" Source="Images\Pencil.jpg" Grid.RowSpan="1"/>
         <MediaElement x:Name="Error" Source="Sound\windows-10-error-soundshorter.mp3" LoadedBehavior="Manual" />
 
 

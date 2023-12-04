@@ -69,6 +69,7 @@ namespace TestForKids
                 {
                     Perfect.Play();
                     Last_Words.Text = $"Perfect score! Good job {name}!";
+                    Perfect_image.Visibility = Visibility.Visible;
                 }
                 else if (finalGrade >= 80 && finalGrade < 100)
                 {
@@ -84,7 +85,7 @@ namespace TestForKids
                 {
                     Fail.Play();
                     Last_Words.Text = ":(";
-                    angryEmojiImage.Source = new BitmapImage(new Uri("C:\\Users\\User\\Downloads\\מקיא.jpg", UriKind.Absolute));
+                    angryEmojiImage.Visibility = Visibility.Visible;
                 }
             }
             catch (Exception ex)

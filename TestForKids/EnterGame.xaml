@@ -81,6 +81,8 @@
                    VerticalAlignment="Top" Margin="410,10,0,0" Grid.ColumnSpan="2" Width="210" Height="107"
             />
 
+        <Image x:Name="Fire" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2"
+               Source="Images/Fire.jpg" Margin="130,100,190,44" Visibility="Collapsed" />
 
         <MediaElement x:Name="Wrong_Answer" Source="Sound\erro.mp3" LoadedBehavior="Manual"/>
         <MediaElement x:Name="Correct" Source="Sound\answer-correct.mp3" LoadedBehavior="Manual"/>

@@ -21,12 +21,11 @@ namespace TestForKids
     /// </summary>
     public partial class MainWindow : Window
     {
+        
 
         public MainWindow()
         {
             InitializeComponent();
-            ספר.Source = new BitmapImage(new Uri("C:\\Users\\User\\Downloads\\שבילים.jpg", UriKind.Absolute));
-            עיפרון.Source = new BitmapImage(new Uri("C:\\Users\\User\\Downloads\\Pencil.jpg", UriKind.Absolute));
       
          
 

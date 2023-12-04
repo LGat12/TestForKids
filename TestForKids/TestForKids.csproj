@@ -118,6 +118,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Resource Include="Images\Fire.jpg" />
+    <Resource Include="Images\PerfectImage.jpg" />
+    <Resource Include="Images\PerfectImage - Copy.jpg" />
     <Content Include="Sound\1-correct-answer_jXgXALQ.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
