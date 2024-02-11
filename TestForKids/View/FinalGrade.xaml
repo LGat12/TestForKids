@@ -37,17 +37,26 @@
             />
 
         <Image x:Name="angryEmojiImage" Source="Images\מקיא.jpg"
-       Grid.Row="1" Margin="0,109,544,-1" Grid.RowSpan="2" Visibility="Collapsed"
+       Grid.Row="1" Margin="0,109,544,-1" Grid.RowSpan="2" Visibility="Visible"
        />
         <Image x:Name="Perfect_image" Source="Images\PerfectImage.jpg"
-       Grid.Row="1" Margin="0,109,544,-55" Grid.RowSpan="2" Visibility="Collapsed"
+       Grid.Row="1" Margin="0,120,594,-68" Grid.RowSpan="2" Visibility="Collapsed"
        />
+
+
+        <Image x:Name="APlus" Source="C:\Users\User\source\repos\TestForKids\TestForKids\Images\A+.png" Grid.Row="1" HorizontalAlignment="Left" Visibility="Collapsed"  />
+        <Image x:Name="AMinus" Source="C:\Users\User\source\repos\TestForKids\TestForKids\Images\A-.jpg" Grid.Row="1" HorizontalAlignment="Left" Visibility="Collapsed" />
+        <Image x:Name="B" Source="C:\Users\User\source\repos\TestForKids\TestForKids\Images\B.png" Grid.Row="1" HorizontalAlignment="Left" Visibility="Collapsed" />
+        <Image x:Name="F" Source="C:\Users\User\source\repos\TestForKids\TestForKids\Images\F.png" Grid.Row="1" HorizontalAlignment="Left" Visibility="Collapsed" />
+
+
+
+
 
 
         <MediaElement x:Name="Perfect" Source="Sound\correcto_Xgyp04B.mp3" LoadedBehavior="Manual" />
         <MediaElement x:Name="Excelent" Source="Sound\correct-answer-new.mp3" LoadedBehavior="Manual" />
         <MediaElement x:Name="Nice" Source="Sound\1-correct-answer_jXgXALQ.mp3" LoadedBehavior="Manual" />
         <MediaElement x:Name="Fail" Source="Sound\thepriceisright-loserhorns.mp3" LoadedBehavior="Manual" />
-
     </Grid>
 </Window>
