@@ -34,6 +34,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -55,35 +59,61 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="EnterGame.xaml">
+    <Compile Include="Model\Grade.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\TimerManager.cs" />
+    <Compile Include="ViewModel\SharedUserViewModel.cs" />
+    <Compile Include="ViewModel\UserViewModel.cs" />
+    <Compile Include="View\AddUser.xaml.cs">
+      <DependentUpon>AddUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainWithFrame.xaml.cs">
+      <DependentUpon>MainWithFrame.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\EnterGame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="FinalGrade.xaml">
+    <Page Include="View\FinalGrade.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Calculator.cs" />
-    <Compile Include="EnterGame.xaml.cs">
+    <Compile Include="View\EnterGame.xaml.cs">
       <DependentUpon>EnterGame.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FinalGrade.xaml.cs">
+    <Compile Include="View\FinalGrade.xaml.cs">
       <DependentUpon>FinalGrade.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="Model\GameLogic.cs" />
+    <Page Include="View\AddUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainWithFrame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Name.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -101,6 +131,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Images\WBACKGROUND2.webp" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -121,6 +152,13 @@
     <Resource Include="Images\Fire.jpg" />
     <Resource Include="Images\PerfectImage.jpg" />
     <Resource Include="Images\PerfectImage - Copy.jpg" />
+    <Resource Include="Images\Blue background.jpg" />
+    <Resource Include="Images\Windows backgound.jpg" />
+    <Resource Include="Images\School.jpg" />
+    <Resource Include="Images\A-.jpg" />
+    <Resource Include="Images\B.png" />
+    <Resource Include="Images\F.png" />
+    <Resource Include="Images\A+.png" />
     <Content Include="Sound\1-correct-answer_jXgXALQ.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -137,6 +175,7 @@
     <Content Include="Sound\erro.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Sound\orb %281%29.mp3" />
     <Content Include="Sound\thepriceisright-loserhorns.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
